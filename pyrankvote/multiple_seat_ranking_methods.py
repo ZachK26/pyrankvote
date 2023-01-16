@@ -27,7 +27,7 @@ def preferential_block_voting(
 
     Voters rank candidates and are granted as many votes as there are people that should be elected. The candidate with
     fewest votes are removed and this voters votes are transfered according to the 2nd preference (or 3rd etc.).
-
+e
     The method is the same as *exaustive ballout*, where repetative voting rounds where everyone has just one vote (no ranking) and
     where the worst candidate is removed, until there are as many candidates left as positions that should be filled.
     This is the prefered method in Robers rules of order. The only between difference between IRV/PBV and exhaustive ballout,
@@ -159,7 +159,7 @@ def single_transferable_vote(
     election_results = ElectionResults()
 
     voters, seats = manager.get_number_of_non_exhausted_ballots(), number_of_seats
-    votes_needed_to_win: float = 3.6 # Drop quota
+    votes_needed_to_win: float = float(3.6) # Drop quota
 
     # Remove worst candidate until same number of candidates left as electable
     # While it is more candidates left than electable
